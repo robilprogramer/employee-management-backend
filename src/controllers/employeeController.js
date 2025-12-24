@@ -8,12 +8,14 @@ class EmployeeController {
    */
   async getAllEmployees(req, res, next) {
     try {
-      const { page, perPage, search } = req.query;
+      const { page, perPage, search, status } = req.query;
+      console.log('Query params:', req.query);
 
       const result = await employeeService.getAllEmployees({
         page: parseInt(page) || 1,
         perPage: parseInt(perPage) || 10,
-        search: search || ''
+        search: search || '',
+        status: status || 'all'
       });
 
       res.json({

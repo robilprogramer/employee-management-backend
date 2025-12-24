@@ -13,7 +13,7 @@ class EmployeeModel {
   async ensureDataDir() {
     try {
       await fs.mkdir(DATA_DIR, { recursive: true });
-      
+
       // Check if employees.json exists, if not create empty array
       try {
         await fs.access(EMPLOYEES_FILE);
@@ -40,13 +40,13 @@ class EmployeeModel {
   }
 
   async findAll(options = {}) {
-    const { page = 1, perPage = 10, search = '' } = options;
+    const { page = 1, perPage = 10, search = '', status = 'all' } = options;
     let employees = await this.readEmployees();
 
     // Search functionality
     if (search) {
       const searchLower = search.toLowerCase();
-      employees = employees.filter(emp => 
+      employees = employees.filter(emp =>
         emp.fullName.toLowerCase().includes(searchLower) ||
         emp.username.toLowerCase().includes(searchLower) ||
         emp.email.toLowerCase().includes(searchLower) ||
@@ -54,7 +54,13 @@ class EmployeeModel {
         emp.position.toLowerCase().includes(searchLower)
       );
     }
-
+    console.log('Employees status filter:', status);
+    // Filter status
+    if (status !== 'all') {
+      const isActive = status === 'active';
+      console.log('Filtering by status:', isActive);
+      employees = employees.filter(emp => emp.isActive === isActive);
+    }
     // Pagination
     const total = employees.length;
     const totalPages = Math.ceil(total / perPage);
@@ -103,6 +109,7 @@ class EmployeeModel {
     const newEmployee = {
       id: uuidv4(),
       ...employeeData,
+      isActive: employeeData.isActive ?? true, // ← FIELD BARU
       avatarUrl: employeeData.avatarUrl || null,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()

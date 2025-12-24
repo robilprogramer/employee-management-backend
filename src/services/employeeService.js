@@ -6,6 +6,7 @@ class EmployeeService {
    * Get all employees with pagination and search
    */
   async getAllEmployees(options) {
+    console.log('Options in service:', options);
     return await employeeModel.findAll(options);
   }
 

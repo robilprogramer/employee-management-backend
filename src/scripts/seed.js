@@ -53,6 +53,7 @@ async function seedDatabase() {
         phone: '+1 (555) 123-4567',
         position: 'Senior Software Engineer',
         department: 'Engineering',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=1',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -65,6 +66,7 @@ async function seedDatabase() {
         phone: '+1 (555) 234-5678',
         position: 'Product Manager',
         department: 'Product',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=2',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -77,6 +79,7 @@ async function seedDatabase() {
         phone: '+1 (555) 345-6789',
         position: 'UX Designer',
         department: 'Design',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=3',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -89,6 +92,7 @@ async function seedDatabase() {
         phone: '+1 (555) 456-7890',
         position: 'Marketing Director',
         department: 'Marketing',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=4',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -101,6 +105,7 @@ async function seedDatabase() {
         phone: '+1 (555) 567-8901',
         position: 'DevOps Engineer',
         department: 'Engineering',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=5',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -113,6 +118,7 @@ async function seedDatabase() {
         phone: '+1 (555) 678-9012',
         position: 'HR Manager',
         department: 'Human Resources',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=6',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -125,6 +131,7 @@ async function seedDatabase() {
         phone: '+1 (555) 789-0123',
         position: 'Data Analyst',
         department: 'Analytics',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=7',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -137,6 +144,7 @@ async function seedDatabase() {
         phone: '+1 (555) 890-1234',
         position: 'Sales Manager',
         department: 'Sales',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=8',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -149,6 +157,7 @@ async function seedDatabase() {
         phone: '+1 (555) 901-2345',
         position: 'QA Engineer',
         department: 'Engineering',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=9',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -161,6 +170,7 @@ async function seedDatabase() {
         phone: '+1 (555) 012-3456',
         position: 'Content Writer',
         department: 'Marketing',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=10',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -173,6 +183,7 @@ async function seedDatabase() {
         phone: '+1 (555) 123-4560',
         position: 'Backend Developer',
         department: 'Engineering',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=11',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -185,6 +196,7 @@ async function seedDatabase() {
         phone: '+1 (555) 234-5601',
         position: 'Frontend Developer',
         department: 'Engineering',
+        isActive: true, // ← STATUS
         avatarUrl: 'https://i.pravatar.cc/150?img=12',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
